@@ -3,20 +3,94 @@
 <head>
 	<title>MakingWeb</title>
 	<style type="text/css">
-		li{
+
+		#address{
 			color:red;
-			text-decoration:underline;
+		}
+		#HeadTable{
+			width: 1800px;
+			color:blue;
+			border-collapse: collapse;
+			padding: 100px;
+			background-color: powderblue;
+		}
+		#lecture{
+			background-color: powderblue;
+			border:10px solid black;
+			color:blue;
+			padding: 10px;
+		}
+		#total{
+			background-color: powderblue;
+		}
+		#main{
+			width:1800px;
+			height:1200px;
+			background-color: white;
+		}
+		#login{
+			float:right;
+			background-color:powderblue;
+			margin:auto;
+		}
+		body{
+
+			background-color: midnightblue;
+			background-size: 300px;
+			background-image: url(보노보노.jpg)
 		}
 	</style>
 </head>
 <body>
-	<table border="1">
+	<table border="0" id="HeadTable">
 		<td><h1 style="color:green">홍준혁의 웹사이트</h1></td>
 	</table>
-	<ul>
-		<li><a href="https://github.com/milky1234" target="_blank">1.Go to Github</a></li>
-		<li><a href="https://www.facebook.com/programmingHong/" target="_blank">2.Go to facebook</a></li>
-		<li><a href="https://blog.naver.com/edb1631" target="_blank">3.Go to NaverBlog</a></li>
-	</ul>
+	<table id="login" border="1">
+		<td>
+				<form action="">
+	        <label for="">ID: <input type="id" id="ID"></label><br><br>
+	        <label for="">PW: <input type="password" id="PW"></label><br>
+	        <button onclick="check_login();">제출</button>
+	    </form>
+	    <a href="signUp.html" style="color:grey">Sign Up</a>
+	    <script type="text/javascript">
+	        function check_login() {
+	            const IdForm = document.getElementById('ID').value;
+	            const PwForm = document.getElementById('PW').value;
+	            if (IdForm === '123') {
+	                if (PwForm === '123') {
+	                    alert('로그인에 성공하였습니다');
+	                }
+	            }
+	        }
+    </script>
+		</td>
+	</table>
+
+	<table id="total" border="1">
+		<td>
+		<ul id="address">
+			<li><a href="https://github.com/milky1234" target="_blank">1.Go to Github</a></li>
+			<li><a href="https://www.facebook.com/programmingHong/" target="_blank">2.Go to facebook</a></li>
+			<li><a href="https://blog.naver.com/edb1631" target="_blank">3.Go to NaverBlog</a></li>
+		</ul>
+		<table id="lecture" border="2">
+			<tr>
+				<td>1.HTML</td>
+			</tr>
+			<tr>
+				<td>2.CSS</td>
+			</tr>
+			<tr>
+				<td>3.JS</td>
+			</tr>
+		</table>
+	</table>
+	<table id="main" border="1">
+		<td>
+			
+		</td>
+	</table>
+	<strong><"Copyright 2020(C) All right reserved"></strong>
 </body>
 </html>
