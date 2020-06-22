@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signUp2</title>
+	<style type="text/css">
+		table{
+			border-collapse: collapse;
+			background-color: #AFEEEE;
+			text-align:center;
+			width: 100%;
+		}
+		body{
+			background-image: url(보노보노.jpg)
+		}
+	</style>
+</head>
+<body>
+	<table border = "1">
+		<tr><th>회원가입을 해주십시요.</th></tr>
+		<form action="" >
+			<tr><td>이메일을 입력하세요.<input type="text" name="email" id="my_email"></td></tr>
+			<tr><td>아이디를 입력하세요.<input type="id" name="ID" id="my_id"></td></tr>
+			<tr><td>비밀번호를 입력하세요.<input type="password" name="PWD" id="my_pwd"></td></tr>
+			<tr><td>비밀번호를 다시 입력하세요.<input type="password" id="pwd_chk"></td></tr>
+			<tr><td><button onclick="check_signUp()">제출</button></td>
+		</form>
+		<script type="text/javascript">
+			function check_signUp(){
+				var email = document.getElementById('my_email');
+				if(email.indexOf('@') == -1)
+				{
+					alert('이메일 형식이 아닙니다');
+				}
+				var id = document.getElementById('my_id');
+				var pwd = document.getElementById('my_pwd');
+				var pwd_chk = document.getElementById('pwd_chk');
+				if(pwd != pwd_chk)
+					alert('비밀번호가 같지 않습니다');
+			}
+		</script>
+	</table>
+
+</body>
+</html>
